@@ -1,0 +1,96 @@
+:root {
+    --primary-text-color: #a11d21;
+    --primary-color: #800000;
+    --linear-gold-color: #ecc440, #fffa8a, #ddac17, #ffff95;
+    --menu-font-color: #767676;
+    --Gian-Hang-Color: #d7fae0;
+}
+
+body {
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    background-image: url("Images/luckywheelbg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#wheel-border {
+    width: 775px;
+    height: 775px;
+
+    border-radius: 50%;
+
+    background: repeating-radial-gradient(circle, white 2.85%, #f6d357 3%, #ce8c34 3.5%, #f6d357 4%, white 4.15%);
+    filter: brightness(1.15);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#wheel-container {
+    width: 750px;
+    height: 750px;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+}
+
+.wheel-center {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 20%;
+    height: 20%;
+
+    background: linear-gradient(60deg, #f6d357 0%, #f6d357 35%, white 45%, #f6d357 60%);
+
+    border-radius: 50%;
+
+    padding: .25em;
+}
+
+.wheel-center::before {
+    content: '';
+
+    position: absolute;
+
+    width: 75%;
+    height: 75%;
+
+
+    top: 0%;
+    left: 50%;
+
+    transform: translate(-50%, -75%);
+
+    border: solid 60.5px;
+    border-color: transparent transparent #f6d357;
+
+    z-index: -1;
+
+}
+
+.wheel-item {
+    position: relative;
+
+}
+@media screen and (max-width: 1024px)  {
+    #body {
+        background-image: url("Images/luckywheel_Vertical.jpg");
+    }
+}

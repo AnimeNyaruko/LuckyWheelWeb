@@ -1014,18 +1014,18 @@
         // Define the number of segments and their labels
         const numSegments = 12;
         const segmentLabels = [
-            ["nice", 30],// 0->20
+            ["nước nice", 30],// 0->20
             ["stronger", 60],// 20->40
-            ["yến", 90],// 40->60
+            ["nước yến", 90],// 40->60
             ["canh", 120],//60->70
             ["cháo", 150],//70->80
             ["hũ kid", 180],//80->85
             ["hũ yến", 210],//85->90
             ["hũ kiêng", 240],//90->95
             ["bánh", 270],//95->96.5
-            ["bột", 300],//96.5->98
-            ["hộp", 330],//98->99
-            ["khô", 360]//99->100
+            ["bột dd", 300],//96.5->98
+            ["hộp yến", 330],//98->99
+            ["khô 10g", 360]//99->100
         ];
 
         //initialize
@@ -1113,7 +1113,7 @@
                 const targetAngle = 30 * targetSegment < 240 ? 270 - 30 * targetSegment - 45 : 360 * 3 / 4 + 30 * (11 - targetSegment + 1) - 45;
                 function animate(currentTime) {
                     let elapsedTime = currentTime - start;
-                    let rotationAngle = elapsedTime / 3000 * 360; // calculate rotation angle in degrees
+                    let rotationAngle = elapsedTime / 1500 * 360; // calculate rotation angle in degrees
                     totalRotation = rotationAngle;
                     ctx.save();
                     ctx.rotate(totalRotation * Math.PI / 180); // convert totalRotation to radians for canvas rotation

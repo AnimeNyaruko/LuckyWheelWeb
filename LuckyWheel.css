@@ -9,42 +9,34 @@
 body {
     width: auto;
     height: auto;
-    margin: 0;
-    padding: 0;
     font-size: 18px;
     font-family: 'Roboto', sans-serif;
     background-image: url("Images/luckywheelbg.jpg");
-    background-repeat: repeat-y;
+    background-repeat:repeat-y;
     background-size: cover;
-}
 
-#wheel-border {
-    width: 775px;
-    height: 775px;
-
-    border-radius: 50%;
-
-    background: repeating-radial-gradient(circle, white 2.85%, #f6d357 3%, #ce8c34 3.5%, #f6d357 4%, white 4.15%);
-    filter: brightness(1.15);
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display:grid;
 }
 
 #wheel-container {
     width: 750px;
     height: 750px;
 
-    position: absolute;
+    position: relative;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
 
     border-radius: 50%;
-
 }
+#wheel{
+    position:absolute;
+
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
 
 .wheel-center {
     position: absolute;
@@ -62,6 +54,8 @@ body {
     border-radius: 50%;
 
     padding: .25em;
+
+    z-index:0;
 }
 
 .wheel-center::before {
@@ -85,10 +79,26 @@ body {
 
 }
 
-.wheel-item {
-    position: relative;
-
+.list-group-item{
+    border:0px!important;
+    border-bottom:black solid 2px!important;
 }
+.list-group-item:first-child{
+    border-top:black solid 2px!important;
+    border-radius: 0!important;
+}
+.list-group-item:last-child{
+    border-radius: 0!important;
+}
+
+.col{
+    border:0;
+    border-right:black solid 2px;
+}
+.col:first-child{
+    border-left:black solid 2px;
+}
+
 @media screen and (max-width: 1024px)  {
     #body {
         background-image: url("Images/luckywheel_Vertical.jpg");

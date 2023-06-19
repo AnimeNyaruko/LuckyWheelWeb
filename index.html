@@ -11,24 +11,24 @@
     <div id="wheel-container" class="pos-relative">
         <div id="info-pop-up"
             class="d-none d-flex flex-column align-items-center rounded bg-white position-absolute  w-100 border border-3 border-dark"
-            style="height:250px;z-index:1;left:50%;top:50%;transform:translate(-50%,-50%);">
+            style="z-index:1;left:50%;top:50%;transform:translate(-50%,-50%);">
             <header class=" w-100 text-center h3 my-3">Vui Lòng Nhập <span class="fw-bold text-uppercase text-danger">Họ
                     tên</span> hoặc <span class="fw-bold text-uppercase text-danger">mã dự thưởng</span></header>
-            <input type="text" class="container-fluid h-25 w-75 border border-3 border-dark rounded">
-            <div onclick="checkState()" class="container bg-success w-25 rounded"
-                style="height:20%;top:100%;transform:translateY(100%);cursor: pointer;">
+            <input type="text" class="container-fluid w-75 border border-3 border-dark rounded mt-5">
+            <div class="container bg-success w-50 rounded"
+                style="top:100%;transform:translateY(100%);cursor: pointer;">
                 <p class="text-white fw-bold h1 d-flex justify-content-center align-items-center h-100"
                     style="font-size: 120%;">QUAY</p>
             </div>
         </div>
         <div id="close-pop-up"
-            class="d-none d-flex flex-column align-items-center rounded bg-white position-absolute  w-75 border border-3 border-dark"
-            style="height:600px;z-index:1;left:50%;top:50%;transform:translate(-50%,-50%);">
+            class="d-none d-flex flex-column align-items-center rounded bg-white position-absolute  w-75 border border-3 border-dark h-75"
+            style="z-index:1;left:50%;top:50%;transform:translate(-50%,-50%);">
             <header class="text-danger fw-bold text-uppercase display-3 my-3">chúc mừng</header>
             <p id="ItemsAlert" class="text-dark small text-center" style="font-size:25px"></p>
             <img src="" alt="ảnh sản phẩm" class="img-fluid w-auto h-50">
-            <div onclick="checkState()" class="container bg-success w-25 rounded"
-                style="height:7.5%;top:100%;transform:translateY(100%);cursor: pointer;">
+            <div class="my-3 container bg-success w-50 rounded"
+                style="cursor: pointer;">
                 <p class="text-white fw-bold h1 d-flex justify-content-center align-items-center h-100"
                     style="font-size: 120%;">TIẾP TỤC</p>
             </div>
@@ -953,7 +953,7 @@
         <header class="display-3 fw-bold d-flex justify-content-center">PHẦN QUÀ ĐÃ NHẬN</header>
         <div id="wrapper" class="container-fluid mb-5 mt-2">
             <div id="RewardsContainer" class="row mx-0 container-fluid">
-                <ol id="Name" class="p-0 col col-4 position-relative list-group h4 fw-bold container" >
+                <ol id="Name" class="p-0 col col-4 position-relative list-group h4 small fw-bold container" >
                     <li class="list-group-item" style="height:45px"></li>
                     <li class="list-group-item" style="height:45px"></li>
                     <li class="list-group-item" style="height:45px"></li>
@@ -965,7 +965,7 @@
                     <li class="list-group-item" style="height:45px"></li>
                     <li class="list-group-item" style="height:45px"></li>
                 </ol>
-                <ol id="Items" class="p-0 col col-5 position-relative list-group h4 fw-bold container" >
+                <ol id="Items" class="p-0 col col-5 position-relative list-group h4 small fw-bold container" >
                     <li class="list-group-item" style="height:45px"></li>
                     <li class="list-group-item" style="height:45px"></li>
                     <li class="list-group-item" style="height:45px"></li>
@@ -977,7 +977,7 @@
                     <li class="list-group-item" style="height:45px"></li>
                     <li class="list-group-item" style="height:45px"></li>
                 </ol>
-                <ol id="Date" class="p-0 col col-3 position-relative list-group h4 fw-bold container" >
+                <ol id="Date" class="p-0 col col-3 position-relative list-group h4 small fw-bold container" >
                     <li class="list-group-item" style="height:45px"></li>
                     <li class="list-group-item" style="height:45px"></li>
                     <li class="list-group-item" style="height:45px"></li>

@@ -232,5 +232,7 @@ img.onload = () => {
     window.addEventListener('keypress', checkKeyPress);
     document.querySelector('#wheel-container #center').addEventListener('click', checkState);
     canvas.addEventListener('click', checkState);
+    document.querySelector('#info-pop-up>div').addEventListener('click',checkState);
+    document.querySelector('#close-pop-up>div').addEventListener('click',checkState);
     showInfoPopUp();
 }

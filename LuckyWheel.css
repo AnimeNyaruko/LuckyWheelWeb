@@ -78,14 +78,23 @@ body {
     align-items: center;
     color:white!important;
 }
-#RewardsContainer ol li:first-child{
-    /* border- */
-}
-#title{
-    width: auto;
-}
 #title img{
     width:25%;
+}
+#returnBtn *{
+    color:white;
+}
+#returnBtn i{
+    font-size:1000%;
+    float:right;
+}
+#returnBtn span{
+    position: relative;
+    top:25%;
+    font-size:300%;
+}
+#returnBtn #wrapper{
+    cursor: pointer;
 }
 
 .wheel-center {

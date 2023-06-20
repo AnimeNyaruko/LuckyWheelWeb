@@ -1,4 +1,6 @@
 const canvas = document.getElementById("myCanvas");
+const canvasW = canvas.width;
+const canvasH = canvas.height;
 const ctx = canvas.getContext("2d");
 let isClosePopUp = false;
 let isInfoPopUp = false;
@@ -42,7 +44,7 @@ const img = new Image();
 
 img.src = "Images/Wheel.png";
 img.onload = () => {
-    ctx.drawImage(img, 0, 0, 750, 750);
+    ctx.drawImage(img, 0, 0, canvasW, canvasH);
     function showInfoPopUp() {
         const info_pop_up = document.getElementById('info-pop-up');
 
@@ -106,7 +108,7 @@ img.onload = () => {
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
                 ctx.translate(canvas.width / 2, canvas.height / 2);
                 ctx.rotate(totalRotation * Math.PI / 180);    
-                ctx.drawImage(img, -canvas.width / 2, -canvas.height / 2, 750, 750);
+                ctx.drawImage(img, -canvas.width / 2, -canvas.height / 2, canvasW, canvasH  );
                 ctx.restore();
                 console.log(totalRotation);
                 if (totalRotation >= 720 + 30 * (11-targetSegment+1)) {

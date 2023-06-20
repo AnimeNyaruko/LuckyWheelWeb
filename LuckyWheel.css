@@ -7,15 +7,15 @@
 }
 
 body {
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100%;
     font-size: 18px;
     font-family: 'Roboto', sans-serif;
     background-image: url("Images/BackgroundPC_2.jpg");
     background-repeat: repeat-y;
     background-size: cover;
 
-    display: grid;
+    /* display: grid; */
 }
 
 #wheel-container {
@@ -57,43 +57,51 @@ body {
 
 #RewardsContainer {
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
 }
+
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 #RewardsContainer ol li {
     background-color: transparent !important;
     display: flex;
     align-items: center;
-    color:white!important;
+    color: white !important;
 }
-#title img{
-    width:25%;
+
+#title img {
+    width: 25%;
 }
-#returnBtn *{
-    color:white;
+
+#returnBtn * {
+    color: white;
 }
-#returnBtn i{
-    font-size:500%;
-    float:right;
+
+#returnBtn i {
+    font-size: 500%;
+    float: right;
 }
-#returnBtn span{
+
+#returnBtn span {
     position: relative;
-    top:25%;
-    font-size:150%;
+    top: 25%;
+    font-size: 150%;
 }
-#returnBtn #wrapper{
+
+#returnBtn #wrapper {
     cursor: pointer;
 }
 
@@ -161,18 +169,14 @@ body {
     border-left: black solid 2px;
 }
 
-@media screen and (max-width: 576px) {
-    #info-pop-up {
-        background-color: red;
-    }
-}
 
 @media screen and (max-width: 1024px) {
     #body {
-        background-image:  url("Images/PhoneBgLoop.png");
+        background-image: url("Images/PhoneBgLoop.png");
         background-repeat: repeat-y;
     }
-    #title img{
-        width:100%;
+
+    #title img {
+        width: 100%;
     }
 }

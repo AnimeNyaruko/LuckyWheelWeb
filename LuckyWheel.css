@@ -14,8 +14,6 @@ body {
     background-image: url("Images/BackgroundPC_2.jpg");
     background-repeat: repeat-y;
     background-size: cover;
-
-    /* display: grid; */
 }
 
 #wheel-container {

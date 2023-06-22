@@ -52,7 +52,7 @@ img.onload = () => {
         isInfoPopUp = true;
         setTimeout(() => {
              document.querySelector('#info-pop-up input').focus();
-         }, 1);
+         }, 500);
     }
     function getRandomFloat(min, max, decimals) {
         const str = (Math.random() * (max - min) + min).toFixed(decimals);

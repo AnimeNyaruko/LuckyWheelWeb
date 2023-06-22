@@ -50,9 +50,9 @@ img.onload = () => {
 
         info_pop_up.classList.remove('d-none');
         isInfoPopUp = true;
-        // setTimeout(() => {
-        //     document.querySelector('#info-pop-up input').focus();
-        // }, 1);
+        setTimeout(() => {
+             document.querySelector('#info-pop-up input').focus();
+         }, 1);
     }
     function getRandomFloat(min, max, decimals) {
         const str = (Math.random() * (max - min) + min).toFixed(decimals);

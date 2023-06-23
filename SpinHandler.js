@@ -4,9 +4,9 @@ const canvasH = canvas.height;
 const ctx = canvas.getContext("2d");
 let isClosePopUp = false;
 let isInfoPopUp = false;
-var NameData = [];
-var DateData = [];
-var ItemsData = [];
+var NameData = JSON.parse(sessionStorage.getItem("Name"));
+var DateData = JSON.parse(sessionStorage.getItem("Date"));
+var ItemsData = JSON.parse(sessionStorage.getItem("Item"));
 
 // Define the number of segments and their labels
 const numSegments = 12;
@@ -37,8 +37,24 @@ const fullLabels = [
     "01 Bột Dinh Dưỡng Đông Trùng Hạ Thảo",
     "01 Hộp Đông Trùng Hạ Thảo Yến",
     "01 Đông Trùng Hạ Thảo Sấy Thăng Hoa 10g"
-]
+];
 //initialize
+if(ItemsData != null){
+    (function InitList(){
+        let ItemsList = document.querySelectorAll('#Top10Rewards #RewardsContainer #Items li');
+        let NameList = document.querySelectorAll('#Top10Rewards #RewardsContainer #Name li');
+        let DateList = document.querySelectorAll('#Top10Rewards #RewardsContainer #Date li');
+    
+        let count=0;
+        for(let i=ItemsData.length-1;ItemsData.length > 10 ? i>10 :i>0;i--){
+            ItemsList[count].innerHTML = ItemsData[i];
+            NameList[count].innerHTML = NameData[i];
+            DateList[count].innerHTML = DateData[i];
+            count++;
+        }
+    })();
+}
+
 let i = 0;
 const img = new Image();
 
@@ -51,8 +67,8 @@ img.onload = () => {
         info_pop_up.classList.remove('d-none');
         isInfoPopUp = true;
         setTimeout(() => {
-             document.querySelector('#info-pop-up input').focus();
-         }, 500);
+            document.querySelector('#info-pop-up input').focus();
+        }, 1);
     }
     function getRandomFloat(min, max, decimals) {
         const str = (Math.random() * (max - min) + min).toFixed(decimals);
@@ -171,14 +187,25 @@ img.onload = () => {
             NameList[i].innerHTML = NameList[i - 1].innerHTML;
             DateList[i].innerHTML = DateList[i - 1].innerHTML;
         }
+
+        let currentTime =  date+' '+time;
         ItemsList[0].innerHTML = list;
         NameList[0].innerHTML = CustomerName;
-        DateList[0].innerHTML = date + ' ' + time;
+        DateList[0].innerHTML = currentTime;
 
+        if(ItemsData == null){
+            ItemsData = new Array;
+            NameData = new Array;
+            DateData = new Array;
+        }
+        
         ItemsData.push(list);
         NameData.push(CustomerName);
-        DateData.push(date + ' ' + time);
-
+        DateData.push(currentTime);
+        
+        sessionStorage.setItem("Item",JSON.stringify(ItemsData));
+        sessionStorage.setItem("Name",JSON.stringify(NameData));
+        sessionStorage.setItem("Date",JSON.stringify(DateData));
     }
     function showPopUp(items, imgLink) {
         isClosePopUp = true;

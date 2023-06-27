@@ -11,48 +11,57 @@ body {
     height: 100%;
     font-size: 18px;
     font-family: 'Roboto', sans-serif;
-    background-image: url("Images/BackgroundPC_2.jpg");
+}
+#container{
+    background-image: url("Images/PhoneBgLoop.png");
     background-repeat: repeat-y;
     background-size: cover;
 }
 
 #wheel-container {
-    width: 750px;
-    height: 750px;
 
-    position: relative;
-    left: 50%;
+    /* left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
 
     border-radius: 50%;
 }
 
 #wheel {
+    width:fit-content;
+    height:auto;
+}
+#wheel-center{
+    height:15%;
+    width:15%;
+
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+
+    background: linear-gradient(60deg, #f6d357 0%, #f6d357 35%, white 45%, #f6d357 60%);
+
+    border-radius:50%;
+
+    padding: .25em;
+
+    z-index:0;
+}
+#wheel-center #wheel-arrow{
     position: absolute;
-
-    top: 50%;
+  
+    width: 75%;
+    height: 75%;
+  
+    top: 0%;
     left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-#info-pop-up {
-    height: 70%;
-}
-
-#info-pop-up>input {
-    height: 15%;
-    font-size: 170%;
-}
-
-#info-pop-up>div {
-    height: 15%;
-}
-
-#close-pop-up>div {
-    height: 12.5%;
-}
-
+  
+    transform: translate(-50%, -75%);
+  
+    border-style: solid;
+    border-color: transparent transparent #f6d357;
+    z-index: -2;
+  }
 #RewardsContainer {
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
@@ -103,45 +112,16 @@ body {
     cursor: pointer;
 }
 
-.wheel-center {
-    position: absolute;
-
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-
-    width: 20%;
-    height: 20%;
-
-    background: linear-gradient(60deg, #f6d357 0%, #f6d357 35%, white 45%, #f6d357 60%);
-
-    border-radius: 50%;
-
-    padding: .25em;
-
-    z-index: 0;
+#info-pop-up{
+    height:fit-content; 
 }
-
-.wheel-center::before {
-    content: '';
-
-    position: absolute;
-
-    width: 75%;
-    height: 75%;
-
-
-    top: 0%;
-    left: 50%;
-
-    transform: translate(-50%, -75%);
-
-    border: solid 60.5px;
-    border-color: transparent transparent #f6d357;
-
-    z-index: -1;
-
+#info-pop-up input{
+    top:50%;
+    transform:translateY(-50%);
+}
+#close-pop-up>div{
+    top:50%;
+    height:fit-content;
 }
 
 .list-group-item {
@@ -167,7 +147,6 @@ body {
     border-left: black solid 2px;
 }
 
-
 @media screen and (max-width: 1024px) {
     #body {
         background-image: url("Images/PhoneBgLoop.png");
@@ -177,4 +156,15 @@ body {
     #title img {
         width: 100%;
     }
+    *{
+        font-size: 100%;
+    }
+}
+@media screen and (max-width: 520px) {
+    *{
+        font-size:97.5%;
+    }
+}
+@media screen and (max-width: 350px) {
+    *{font-size:95%;}
 }

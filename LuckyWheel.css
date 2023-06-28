@@ -90,7 +90,7 @@ body {
 }
 
 #title img {
-    width: 25%;
+    width: 50%;
 }
 
 #returnBtn * {
@@ -98,14 +98,14 @@ body {
 }
 
 #returnBtn i {
-    font-size: 500%;
+    font-size: 300%;
     float: right;
 }
 
 #returnBtn span {
     position: relative;
     top: 25%;
-    font-size: 150%;
+    font-size: 100%;
 }
 
 #returnBtn #wrapper {

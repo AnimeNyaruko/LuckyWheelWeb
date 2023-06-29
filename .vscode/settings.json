@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+      "*.js": "javascript",
+      "*.mjs": "javascript"
+    },
+    "liveServer.settings": {
+      "mimeTypes": {
+        "javascript": ["js", "mjs"]
+      }
+    }
+  }

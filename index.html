@@ -99,10 +99,11 @@
                 media.type = "text/javascript";
                 media.src = "MediaQuery.js";
                 document.head.appendChild(media);
+
                 // Add the SpinHandler.js script
                 var spinScript = document.createElement("script");
-                spinScript.type = "text/javascript";
-                spinScript.src = "SpinHandler.js";
+                spinScript.type = "module";
+                spinScript.src = "./SpinHandler.js";
                 document.head.appendChild(spinScript);
 
                 // Add the Font Awesome script

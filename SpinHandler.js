@@ -1,3 +1,5 @@
+import { DataHandler } from "./DataHandler.js";
+
 const canvas = document.getElementById('myCanvas');
 let canvasW = canvas.width;
 let canvasH = canvas.height;
@@ -161,6 +163,7 @@ img.onload = () => {
                         window.addEventListener('keypress', checkKeyPress);
                         document.querySelector('#wheel-container #wheel').addEventListener('click', checkState);
                         canvas.addEventListener('click', checkState);
+
                         return;
                     }, 3000);
                 }
@@ -191,26 +194,29 @@ img.onload = () => {
         PhoneList[0].innerHTML = encodePhone(CustomerInfo);
         DateList[0].innerHTML = currentTime;
 
+        
         if (ItemsData == null) {
             ItemsData = new Array;
             PhoneData = new Array;
             DateData = new Array;
             RewardCode = new Array;
             Rewards = new Array;
-
+            
         }
-
+        
         ItemsData.push(list);
         DateData.push(currentTime);
 
         ('0'.charCodeAt(0) <= CustomerInfo[0].charCodeAt(0) && CustomerInfo[0].charCodeAt(0) <= '9'.charCodeAt(0) ? PhoneData.push(CustomerInfo) : RewardCode.push(CustomerInfo));
         Rewards.push(CustomerInfo);
-
+        
         sessionStorage.setItem("Item", JSON.stringify(ItemsData));
         sessionStorage.setItem("Name", JSON.stringify(Rewards));
         sessionStorage.setItem("Phone", JSON.stringify(PhoneData));
         sessionStorage.setItem("RWC", JSON.stringify(RewardCode));
         sessionStorage.setItem("Date", JSON.stringify(DateData));
+
+        DataHandler(list,CustomerInfo,currentTime);
     }
     function showPopUp(items, imgLink) {
         isClosePopUp = true;

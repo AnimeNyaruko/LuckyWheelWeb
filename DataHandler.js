@@ -3,10 +3,6 @@ export async function DataHandler(items, data, date) {
     const owner = 'AnimeNyaruko';
     const repo = 'LuckyWheelWeb';
 
-    items = items.toString();
-    data = items.toString();
-    date = items.toString();
-
     const url = `https://api.github.com/repos/${owner}/${repo}/contents/PushData/data.json`;
     const response = await fetch(url, {
         headers: {

@@ -1,5 +1,5 @@
 export async function DataHandler(items, data, date) {
-    const accessToken = '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';
+    const accessToken = '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';
     const owner = 'AnimeNyaruko';
     const repo = 'LuckyWheelWeb';
 
@@ -11,7 +11,7 @@ export async function DataHandler(items, data, date) {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            title: 'New issue',
+            title: 'Khách hàng mới',
             body: `Sản phẩm trúng: ${items}\nDữ liệu: ${JSON.stringify(data)}\nThời gian: ${date}`
         })
     });

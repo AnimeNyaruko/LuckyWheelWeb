@@ -1,4 +1,4 @@
-import { DataHandler } from "./DataHandler.js";
+import { DataHandler } from "./PushData/DataHandler.js";
 
 const canvas = document.getElementById('myCanvas');
 let canvasW = canvas.width;

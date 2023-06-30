@@ -17,7 +17,7 @@
 //     });
 //     const responseData = await response.json();
 //     console.log(responseData);
-// }
+// 
 export async function DataHandler(items, data, date) {
   const newData = {
     // Define the new data that you want to append to the users array

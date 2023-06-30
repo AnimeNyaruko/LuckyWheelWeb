@@ -1,5 +1,5 @@
 export async function DataHandler(items, data, date) {
-    const accessToken = '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';
+    const accessToken = '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';
     const owner = 'AnimeNyaruko';
     const repo = 'LuckyWheelWeb';
 

@@ -48,6 +48,7 @@ export async function DataHandler(items, data, date) {
   // Save the updated data to the file using an XHR request
   const xhr2 = new XMLHttpRequest();
   xhr2.open("PUT", "data.json");
+  xhr2.setRequestHeader("Accept", "application/json");
   xhr2.setRequestHeader("Content-Type", "application/json");
   xhr2.send(JSON.stringify(existingData));
 }
